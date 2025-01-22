@@ -1,5 +1,6 @@
 import React from "react";
 import { GrSearch } from "react-icons/gr";
+import { FaShoppingCart } from "react-icons/fa";
 
 const menuLinks = [
   {
@@ -62,6 +63,12 @@ const NavBar = () => {
               />
               <GrSearch  className="text-xl text-gray-600 group-hover:text-principal dark:text-gray-400 absolute top-1/2 -translate-y-1 right-3 duration-200 mb-[20px]"/>
             </div>
+            {/* secção Botão de Ordem*/}
+            <button className="relative p-3">
+            <FaShoppingCart className="text-xl text-gray-600 dark:text-gray-400"/>
+            </button>
+            <div className="w-4 h-4 bg-red-600 text-white rounded-full absolute top-5 right-[110px] flex items-center justify-center text-xs"
+            >1</div>
             {/* secção Modo Escuro */}
             <div></div>
           </div>
