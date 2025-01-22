@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer componetes {
+@layer components {
     .search-bar {
-    @apply w-0 group-hover:w-[300px] group-hover:h-[35px] transition-all duration-300 rounded-full bg-gray-100 group-hover:border group-hover:border-gray-500 px-3 py-1 focus:outline-none dark:border-gray-800 dark:bg-gray-900 group-hover:dark:bg-gray-800;
+    @apply w-0 group-hover:w-[300px] group-hover:h-[35px] transition-all duration-300 rounded-full group-hover:border group-hover:border-gray-500 px-3 py-1 focus:outline-none dark:border-gray-800 dark:bg-gray-900 group-hover:dark:bg-gray-800;
   }
 }

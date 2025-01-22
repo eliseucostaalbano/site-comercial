@@ -1,6 +1,7 @@
 import React from "react";
 import { GrSearch } from "react-icons/gr";
 import { FaShoppingCart } from "react-icons/fa";
+import DarkMode from "./DarkMode"
 
 const menuLinks = [
   {
@@ -66,11 +67,14 @@ const NavBar = () => {
             {/* secção Botão de Ordem*/}
             <button className="relative p-3">
             <FaShoppingCart className="text-xl text-gray-600 dark:text-gray-400"/>
-            </button>
-            <div className="w-4 h-4 bg-red-600 text-white rounded-full absolute top-5 right-[110px] flex items-center justify-center text-xs"
+            <div className="w-4 h-4 bg-red-600 text-white rounded-full absolute top-1 right-1 flex items-center justify-center text-xs"
             >1</div>
+            </button>
+            
             {/* secção Modo Escuro */}
-            <div></div>
+            <div>
+            <DarkMode />
+            </div>
           </div>
         </div>
       </div>
