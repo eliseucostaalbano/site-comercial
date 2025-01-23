@@ -1,6 +1,7 @@
 import React from "react";
 import { GrSearch } from "react-icons/gr";
 import { FaShoppingCart } from "react-icons/fa";
+import { FaCaretDown } from "react-icons/fa";
 import DarkMode from "./DarkMode"
 
 const menuLinks = [
@@ -26,6 +27,24 @@ const menuLinks = [
   },
 ];
 
+const dropdownLinks = [
+  {
+    id: 1,
+    nome: "Em Alta",
+    link: "/#",
+  },
+  {
+    id: 2,
+    nome: "Mais Vendidos",
+    link: "/#",
+  },
+  {
+    id: 3,
+    nome: "Melhores Avaliados",
+    link: "/#",
+  },
+];
+
 const NavBar = () => {
   return (
     <div className="bg-white dark:bg-gray-900 dark:text-white duration-200 relative z-40">
@@ -41,17 +60,43 @@ const NavBar = () => {
             </a>
             {/* Menu Items */}
             <div className="hidden lg:block">
-              <ul className="flex items-center gap-4">
+              <ul className="flex items-center gap-6">
                 {menuLinks.map((data, index) => (
                   <li key={index}>
                     <a
                       href={data.link}
-                      className="inline-block px-4 font-semibold text-gray-500 hover:text-black dark:hover:text-white duration-200"
+                      className=" text-gray-500 hover:text-black dark:hover:text-white duration-200"
                     >
                       {data.nome}
                     </a>
                   </li>
                 ))}
+                {/* Menu DropDown */}
+                <li className="relative cursor-pointer group">
+                <a href="#" className="flex items-center gap-[2px] font-semibold text-gray-500 py-2 dark:hover:text-white ">
+                Links Rapidos
+                <span>
+                <FaCaretDown  className="group-hover:rotate-180 duration-300"/>
+                </span>
+                </a>
+                {/*  DropDown Links */}
+                <div className="absolute z-[9999] hidden group-hover:block w-[200px] rounded-md bg-white 
+                shadow-md dark:bg-gray-900 dark:text-white p-2">
+                  <ul className="space-y-2">
+                  {dropdownLinks.map((data, index) => (
+                  <li key={index}>
+                    <a
+                      href={data.link}
+                      className="inline-block w-full font-semibold text-gray-500 dark:hover:text-white 
+                      duration-200 p-2 hover:bg-principal/50 rounded-md"
+                    >
+                      {data.nome}
+                    </a>
+                  </li>
+                ))}
+                  </ul>
+                </div>
+                </li>
               </ul>
             </div>
           </div>
@@ -70,7 +115,6 @@ const NavBar = () => {
             <div className="w-4 h-4 bg-red-600 text-white rounded-full absolute top-1 right-1 flex items-center justify-center text-xs"
             >1</div>
             </button>
-            
             {/* secção Modo Escuro */}
             <div>
             <DarkMode />
