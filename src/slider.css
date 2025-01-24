@@ -1,0 +1,17 @@
+.slick-dots li button:before {
+    color: gray;
+  }
+  
+  /* Cor do dot ativo */
+  .slick-dots li.slick-active button:before {
+    color: darkblue;
+  }
+  /* Cor quando a classe "dark" está presente */
+.dark .slick-dots li button:before {
+    color: white;
+  }
+  
+  /* Cor do dot ativo no modo escuro */
+  .dark .slick-dots li.slick-active button:before {
+    color: black;
+  }
