@@ -58,7 +58,7 @@ const Categoria2 = () => {
                 />
               </div>
             </div>
-            <img src= {Image3} alt="" className="w-[200px] absolute right-0 bottom-0 "/>
+            <img src= {Image3} alt="" className="w-[250px] absolute right-0 bottom-0 "/>
           </div>
         </div>
       </div>
