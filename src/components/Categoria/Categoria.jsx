@@ -50,7 +50,7 @@ const Categoria = () => {
               <div className="mb-4">
                 <p className="mb-[2px] text-white">Aproveite</p>
                 <p className="text-2xl font-semibold mb-[2px]">Com</p>
-                <p className="text-4xl xl:text-5xl font-bold opacity-20 mb-4">Laptop</p>
+                <p className="text-4xl xl:text-5xl font-bold opacity-20 mb-4">Laptops</p>
                 <Button 
                   text="Comprar"
                   bgColor={"bg-white"}
