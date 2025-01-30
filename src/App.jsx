@@ -6,10 +6,12 @@ import Categoria2 from './components/Categoria/Categoria2';
 import Serviços from './components/Serviços/Serviços'
 import Banner from './components/Banner/Banner'
 import Produtos from "./components/Produtos/Produtos";
+import Blogs from './components/Blogs/Blogs';
 import Footer from "./components/Footer/Footer"
 
 import headphone from "./assets/Hero/headphone.png";
 import smartwatch2 from "./assets/Categoria/smartwatch2.png";
+
 
 const BannerData = {
   desconto: "30% OFF",
@@ -44,6 +46,7 @@ const App = () => {
       <Banner data={BannerData} />
       <Produtos />
       <Banner data={BannerData2} />
+      <Blogs />
       <Footer />
     </div>
   )
