@@ -7,6 +7,7 @@ import Serviços from './components/Serviços/Serviços'
 import Banner from './components/Banner/Banner'
 import Produtos from "./components/Produtos/Produtos";
 import Blogs from './components/Blogs/Blogs';
+import Parceiros from './components/Parceiros/Parceiros';
 import Footer from "./components/Footer/Footer"
 
 import headphone from "./assets/Hero/headphone.png";
@@ -47,6 +48,7 @@ const App = () => {
       <Produtos />
       <Banner data={BannerData2} />
       <Blogs />
+      <Parceiros />
       <Footer />
     </div>
   )
