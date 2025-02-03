@@ -9,6 +9,7 @@ import Produtos from "./components/Produtos/Produtos";
 import Blogs from './components/Blogs/Blogs';
 import Parceiros from './components/Parceiros/Parceiros';
 import Footer from "./components/Footer/Footer"
+import Popup from "./components/Popup/Popup"
 
 import headphone from "./assets/Hero/headphone.png";
 import smartwatch2 from "./assets/Categoria/smartwatch2.png";
@@ -37,10 +38,16 @@ const BannerData2 = {
 };
 
 const App = () => {
+  const [orderPopup, setOrderPopup] = React.useState(false);
+
+  const handleOrderPopup = () => {
+    setOrderPopup(!orderPopup);
+  };
+
   return (
     <div className='bg-white dark:bg-gray-800 dark:text-white duration-200 overflow-hidden'>
-      <NavBar/>
-      <Hero />
+      <NavBar handleOrderPopup={handleOrderPopup}/>
+      <Hero handleOrderPopup={handleOrderPopup}/>
       <Categoria />
       <Categoria2 />
       <Serviços />
@@ -50,8 +57,9 @@ const App = () => {
       <Blogs />
       <Parceiros />
       <Footer />
+      <Popup orderPopup={orderPopup} handleOrderPopup={handleOrderPopup} />
     </div>
   )
 }
-
+ 
 export default App
